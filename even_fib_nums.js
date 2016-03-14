@@ -8,8 +8,19 @@
 function _sumFibs( maxFibValue ) {
   var sum = 0;
 
-  // do your work here
+  var prevPrev = 0;
+  var prev = 1;
+  var newFib = 0;
 
+  while(prev <= maxFibValue) {
+    if(prev%2 === 0) {
+      sum += prev;
+    }
+
+    newFib = prevPrev + prev;
+    prevPrev = prev;
+    prev = newFib;
+  }
   return sum;
 }
 
@@ -17,8 +28,17 @@ function _sumFibs( maxFibValue ) {
 function _highestFibonacciNumber (maxFibValue){
   var highest = 0;
 
-  //define your base case, validate your input
+  var prevPrev = 0;
+  var prev = 1;
+  var newFib = 0;
 
+  while(prev <= maxFibValue) {
+    highest = prev;
+
+    newFib = prevPrev + prev;
+    prevPrev = prev;
+    prev = newFib;
+  }
 
   //do your work here
 
